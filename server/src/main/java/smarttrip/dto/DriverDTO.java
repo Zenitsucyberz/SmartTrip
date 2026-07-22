@@ -1,0 +1,10 @@
+package smarttrip.dto;
+
+import lombok.Data;
+
+@Data
+public class DriverDTO {
+    private Long id;
+    private String name;
+    private String email;
+}

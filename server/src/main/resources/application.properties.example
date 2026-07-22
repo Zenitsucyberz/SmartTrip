@@ -1,0 +1,18 @@
+spring.application.name=smarttrip
+spring.datasource.url=jdbc:mysql://localhost:3306/smarttrip
+spring.datasource.username=root
+spring.datasource.password=
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+
+# External APIs - get your own keys from openweathermap.org and openrouteservice.org
+openweather.api.key=your-openweathermap-key
+openroute.api.key=your-openrouteservice-key
+# Free key from aistudio.google.com -> API keys
+gemini.api.key=your-gemini-key
+
+# JWT signing secret (HS256 needs >= 32 bytes) and token lifetime (ms)
+app.jwt.secret=change-me-to-a-random-32-byte-string
+app.jwt.expiration-ms=86400000

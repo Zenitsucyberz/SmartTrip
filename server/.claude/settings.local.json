@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm \"D:/telegram/Web Services Development/smarttrip-frontend/.claude/launch.json\")",
+      "Bash(rmdir \"D:/telegram/Web Services Development/smarttrip-frontend/.claude\")",
+      "Bash(command -v mysql)",
+      "Bash(mysql --version)",
+      "PowerShell(Get-NetTCPConnection -LocalPort 8080 -State Listen -ErrorAction SilentlyContinue | ForEach-Object { $p = Get-Process -Id $_.OwningProcess -ErrorAction SilentlyContinue; [PSCustomObject]@{PID=$_.OwningProcess; Name=$p.Name; Path=$p.Path; StartTime=$p.StartTime} })",
+      "PowerShell(Stop-Process -Id 25236 -Force)",
+      "PowerShell(Get-NetTCPConnection -LocalPort 8080 -State Listen -ErrorAction SilentlyContinue)",
+      "PowerShell(Invoke-WebRequest -Uri \"http://localhost:8080/api/trips\" -Method GET -UseBasicParsing -ErrorAction SilentlyContinue; $Error[0].Exception.Response.StatusCode.value__)",
+      "Bash(\"/d/laragon/bin/mysql/mysql-8.0.30-winx64/bin/mysql\" -u root -h localhost -e \"SELECT id, name, email, role FROM smarttrip.users;\")",
+      "PowerShell($conn = Get-NetTCPConnection -LocalPort 8080 -State Listen -ErrorAction SilentlyContinue; if \\($conn\\) { $conn.OwningProcess | Select-Object -Unique | ForEach-Object { Stop-Process -Id $_ -Force; \"killed PID $_\" } } else { \"nothing on 8080\" }; Start-Sleep -Milliseconds 800; if \\(Get-NetTCPConnection -LocalPort 8080 -State Listen -ErrorAction SilentlyContinue\\) { \"still up\" } else { \"port free\" })",
+      "PowerShell($conn = Get-NetTCPConnection -LocalPort 8080 -State Listen -ErrorAction SilentlyContinue; if \\($conn\\) { $conn.OwningProcess | Select-Object -Unique | ForEach-Object { Stop-Process -Id $_ -Force } }; Start-Sleep -Milliseconds 800; Set-Location \"D:\\\\telegram\\\\Web Services Development\\\\smarttrip\"; .\\\\mvnw.cmd -q -o compile 2>&1 | Select-Object -Last 30; \"compile-exit=$LASTEXITCODE\")",
+      "PowerShell($conn = Get-NetTCPConnection -LocalPort 8080 -State Listen -ErrorAction SilentlyContinue; if \\($conn\\) { $conn.OwningProcess | Select-Object -Unique | ForEach-Object { Stop-Process -Id $_ -Force } }; Start-Sleep -Milliseconds 900; Set-Location \"D:\\\\telegram\\\\Web Services Development\\\\smarttrip\"; .\\\\mvnw.cmd -q -o compile 2>&1 | Select-Object -Last 25; \"compile-exit=$LASTEXITCODE\")",
+      "Bash(pandoc -t markdown \"D:\\\\telegram\\\\Research\\\\research_proposal_choi.docx\")",
+      "PowerShell(Get-Command pandoc -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-Command soffice -ErrorAction SilentlyContinue)",
+      "Bash(python3 -c \"import docx; print\\('ok'\\)\")",
+      "Bash(python -c \"import docx; print\\('ok'\\)\")",
+      "Bash(mkdir -p \"/c/Users/ebinb/AppData/Local/Temp/claude/D--telegram-Web-Services-Development-smarttrip/eef049f7-a582-4871-83fa-c70303431a0a/scratchpad/proposal_unzip\")",
+      "Bash(unzip -o -q \"D:\\\\telegram\\\\Research\\\\research_proposal_choi.docx\" -d \"/c/Users/ebinb/AppData/Local/Temp/claude/D--telegram-Web-Services-Development-smarttrip/eef049f7-a582-4871-83fa-c70303431a0a/scratchpad/proposal_unzip\")",
+      "Read(//c/Users/ebinb/AppData/Local/Temp/claude/D--telegram-Web-Services-Development-smarttrip/eef049f7-a582-4871-83fa-c70303431a0a/scratchpad/proposal_unzip/**)",
+      "Bash(command -v node)",
+      "Bash(node \"C:\\\\Users\\\\ebinb\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\D--telegram-Web-Services-Development-smarttrip\\\\eef049f7-a582-4871-83fa-c70303431a0a\\\\scratchpad\\\\extract_docx_text.js\" \"C:\\\\Users\\\\ebinb\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\D--telegram-Web-Services-Development-smarttrip\\\\eef049f7-a582-4871-83fa-c70303431a0a\\\\scratchpad\\\\proposal_unzip\\\\word\\\\document.xml\")",
+      "PowerShell($conn = Get-NetTCPConnection -LocalPort 8080 -State Listen -ErrorAction SilentlyContinue; if \\($conn\\) { $conn.OwningProcess | Select-Object -Unique | ForEach-Object { Stop-Process -Id $_ -Force } }; Start-Sleep -Milliseconds 900; Set-Location \"D:\\\\telegram\\\\Web Services Development\\\\smarttrip\"; Remove-Item backend-run.log,backend-run-err.log -ErrorAction SilentlyContinue; Start-Process -FilePath \".\\\\mvnw.cmd\" -ArgumentList \"spring-boot:run\" -RedirectStandardOutput \"backend-run.log\" -RedirectStandardError \"backend-run-err.log\" -NoNewWindow -PassThru | Select-Object -ExpandProperty Id)",
+      "Bash(npm install *)",
+      "Bash(rm -f /tmp/resp.json /tmp/ers.json /tmp/reassign.json 2>/dev/null; echo done)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:21st.dev)",
+      "PowerShell($conn = Get-NetTCPConnection -LocalPort 8080 -State Listen -ErrorAction SilentlyContinue; if \\($conn\\) { $conn.OwningProcess | Select-Object -Unique | ForEach-Object { Stop-Process -Id $_ -Force } }; Start-Sleep -Milliseconds 800; \"port 8080 freed\")",
+      "Bash(curl -s -o /dev/null -w \"backend HTTP %{http_code}\\\\n\" -X POST http://localhost:8080/api/auth/login -H \"Content-Type: application/json\" -d '{\"email\":\"admin@gmail.com\",\"password\":\"1234\"}')",
+      "Bash(command -v rsync)",
+      "Bash(command -v zip)"
+    ]
+  }
+}
