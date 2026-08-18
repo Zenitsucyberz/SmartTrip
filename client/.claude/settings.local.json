@@ -1,7 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(cd /Users/dev/workspace-b1c7f3bc && ls -la)"
-    ]
-  }
-}
